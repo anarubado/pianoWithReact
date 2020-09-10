@@ -1,0 +1,33 @@
+body {
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.nota {
+  background-color: white;
+  margin: 5px;
+  height: 400px;
+  width: 100px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.nota-negra {
+  background-color: black;
+  margin: 5px;
+  height: 250px;
+  width: 50px;
+  border-radius: 10px;
+  position: absolute;
+  right: -30px;
+  z-index: 1;
+}
+
+.estaSonando {
+  color: grey;
+}
