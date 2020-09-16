@@ -1,9 +1,32 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+a{
+  font-weight: bolder;
+}
+
+span{
+  background-color: rgb(25, 19, 114);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 24px;
 }
 
 body {
-  background-color: #333;
+  background-image: url("./bg.jpg");
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -19,7 +42,15 @@ body {
   justify-content: flex-start;
   align-items: center;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title .react{
+  color: #61dafb;
+}
+
+.title .ada{
+  color: #b71b59;
 }
 
 .white {
@@ -29,6 +60,14 @@ body {
   width: 100px;
   border-radius: 5px;
   border: 1px solid #333;
+}
+
+div:nth-child(5), div:nth-child(12), div:nth-child(17), div:nth-child(24){
+  margin-right: 0px;
+  border-right: none;
+}
+div:nth-child(6), div:nth-child(13), div:nth-child(18), div:nth-child(25){
+  margin-left: 0px;
 }
 
 .black {
@@ -44,5 +83,5 @@ body {
 
 .isSounding {
   background-color: #999;
-  transition: 1s;
+  transition: 0.5s;
 }

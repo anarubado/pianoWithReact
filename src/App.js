@@ -7,99 +7,196 @@ export default function App() {
 
   const notes = [
     {
-      name: "Do",
-      link: require("./notes/C.mp3"),
+      name: "Do3",
+      link: require("./notes/c3.mp3"),
       key: "white"
     },
     {
-      name: "Do# / Reb",
-      link: require("./notes/CSharp.mp3"),
+      name: "Do#3 / Reb3",
+      link: require("./notes/c-3.mp3"),
       key: "black"
     },      
     {
-      name: "Re",
-      link: require("./notes/D.mp3"),
+      name: "Re3",
+      link: require("./notes/d3.mp3"),
       key: "white"
     },
     {
-      name: "Re# / Mib",
-      link: require("./notes/DSharp.mp3"),
+      name: "Re#3 / Mib3",
+      link: require("./notes/d-3.mp3"),
       key: "black"
     },
     {
-      name: "Mi",
-      link: require("./notes/E.mp3"),
+      name: "Mi3",
+      link: require("./notes/e3.mp3"),
       key: "white"
     },
     {
-      name: "Fa",
-      link: require("./notes/F.mp3"),
+      name: "Fa3",
+      link: require("./notes/f3.mp3"),
       key: "white"
     },
     {
-      name: "Fa# / Solb",
-      link: require("./notes/FSharp.mp3"),
+      name: "Fa#3 / Solb3",
+      link: require("./notes/f-3.mp3"),
       key: "black"
     },
     {
-      name: "Sol",
-      link: require("./notes/G.mp3"),
+      name: "Sol3",
+      link: require("./notes/g3.mp3"),
       key: "white"
     },
     {
-      name: "Sol# / Lab",
-      link: require("./notes/GSharp.mp3"),
+      name: "Sol#3 / Lab3",
+      link: require("./notes/g-3.mp3"),
       key: "black"
     },
     {
-      name: "La",
-      link: require("./notes/A.mp3"),
+      name: "La4",
+      link: require("./notes/a4.mp3"),
       key: "white"
     },
     {
-      name: "La# / Sib",
-      link: require("./notes/ASharp.mp3"),
+      name: "La#4 / Sib4",
+      link: require("./notes/a-4.mp3"),
       key: "black"
     },
     {
-      name: "Si",
-      link: require("./notes/B.mp3"),
+      name: "Si4",
+      link: require("./notes/b4.mp3"),
+      key: "white"
+    },
+    {
+      name: "Do4",
+      link: require("./notes/c4.mp3"),
+      key: "white"
+    },
+    {
+      name: "Do#4 / Reb4",
+      link: require("./notes/c-4.mp3"),
+      key: "black"
+    },      
+    {
+      name: "Re4",
+      link: require("./notes/d4.mp3"),
+      key: "white"
+    },
+    {
+      name: "Re#4 / Mib4",
+      link: require("./notes/d-4.mp3"),
+      key: "black"
+    },
+    {
+      name: "Mi4",
+      link: require("./notes/e4.mp3"),
+      key: "white"
+    },
+    {
+      name: "Fa4",
+      link: require("./notes/f4.mp3"),
+      key: "white"
+    },
+    {
+      name: "Fa#4 / Solb4",
+      link: require("./notes/f-4.mp3"),
+      key: "black"
+    },
+    {
+      name: "Sol4",
+      link: require("./notes/g4.mp3"),
+      key: "white"
+    },
+    {
+      name: "Sol#4 / Lab4",
+      link: require("./notes/g-4.mp3"),
+      key: "black"
+    },
+    {
+      name: "La5",
+      link: require("./notes/a5.mp3"),
+      key: "white"
+    },
+    {
+      name: "La#5 / Sib5",
+      link: require("./notes/a-5.mp3"),
+      key: "black"
+    },
+    {
+      name: "Si5",
+      link: require("./notes/b5.mp3"),
+      key: "white"
+    },
+    {
+      name: "Do5",
+      link: require("./notes/c5.mp3"),
+      key: "white"
+    },
+    {
+      name: "Do#5",
+      link: require("./notes/c-5.mp3"),
+      key: "black"
+    },
+    {
+      name: "Re5",
+      link: require("./notes/d5.mp3"),
+      key: "white"
+    },
+    {
+      name: "Re#5 / Mib5",
+      link: require("./notes/d-5.mp3"),
+      key: "black"
+    },
+    {
+      name: "Mi5",
+      link: require("./notes/e5.mp3"),
       key: "white"
     }
+
   ];
 
-  const handleClick = (note) => {
+  const keys = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9", "o", "0", "p", "z", "s", "x", "d", "c", "f", "v", "b", "h", "n", "j", "m"]
+
+  const play = (note) => {
     setIsSounding(note.name);
     const audio = new Audio(note.link);
     audio.play();
     setTimeout(() => {
       setIsSounding(null);
-    }, 300);
+    }, 200);
+  };
+
+  const handleKeyDown = (key) => {    
+    let keyIndex = keys.indexOf(key);
+    if (keyIndex > -1){
+      play(notes[keyIndex]);
+    }
   };
 
   return (
     <div className="App">
 
       <div className="title">
-        <h1>Piano con React</h1>
-        <h2>Hecho con Ada</h2>
+        <span>Piano con <a href="https://reactjs.org/" className="react">React</a></span>
+        <span>Hecho por Ani con las chicas de <a href="https://adaitw.org/" className="ada"> Ada</a></span>
         {
-          isSounding && <h3>Está sonando la nota { isSounding }</h3>
+          isSounding && <span>Está sonando la nota { isSounding }</span>
         }        
       </div>
 
-      <span className="container">
+      <div className="container">
 
         {notes.map((note, idx) => {
           return (
             <div className={`${note.key === "white" ? "white" : "black"} 
             ${isSounding === note.name ? "isSounding" : ""}`} 
-            onClick={() => handleClick(note)} key={idx}>
+            onClick={() => play(note)} key={idx}
+            onKeyDown={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
+
             </div>
           );
         })}
 
-      </span>
+      </div>
     </div>
   );
 }
