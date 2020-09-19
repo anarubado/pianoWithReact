@@ -154,7 +154,10 @@ export default function App() {
 
   ];
 
-  const keys = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9", "o", "0", "p", "z", "s", "x", "d", "c", "f", "v", "b", "h", "n", "j", "m"]
+  const keys = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9", "o", "0", "p", "[", "=", "]", "a",
+  
+  "z", "s", "x", "c", "f", "v", "g", "b"]
+  // , "n", "j", "m", "k", ",", "l", ".", "/"];
 
   const play = (note) => {
     setIsSounding(note.name);
@@ -176,8 +179,13 @@ export default function App() {
     <div className="App">
 
       <div className="title">
-        <span>Piano con <a href="https://reactjs.org/" className="react">React</a></span>
-        <span>Hecho por Ani con las chicas de <a href="https://adaitw.org/" className="ada"> Ada</a></span>
+        <span>Piano con <a href="https://reactjs.org/" className="react">React</a>
+          <img src="react-icon.png" alt="React Logo" width="40px"></img>
+        </span>
+
+        <span>Hecho por Ani con las chicas de 
+          <img src="logo-fucsia.png" alt="Ada Logo" height="35px"></img>
+        </span>
         {
           isSounding && <span>Está sonando la nota { isSounding }</span>
         }        
@@ -190,7 +198,7 @@ export default function App() {
             <div className={`${note.key === "white" ? "white" : "black"} 
             ${isSounding === note.name ? "isSounding" : ""}`} 
             onClick={() => play(note)} key={idx}
-            onKeyDown={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
+            onKeyPress={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
 
             </div>
           );
