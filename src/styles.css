@@ -7,42 +7,44 @@
   outline: none;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+
 a{
   font-weight: bolder;
 }
 
-span{
+h3{
   background-color: rgb(25, 19, 114);
   padding: 10px;
   border-radius: 5px;
   margin: 5px;
   font-size: 24px;
+  display: block;
 }
 
 body {
   background-image: url("./bg.jpg");
-  width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh;
 }
 
 .container {
   display: flex;
-  margin: 30px auto;
+  margin: 30px;
   justify-content: center;
+  -webkit-transform: rotate(90deg);  /* to support Safari and Android browser */
+  -ms-transform: rotate(90deg);      /* to support IE 9 */
+  transform: rotate(90deg);
 }
 
 .title{
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  color: white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  display: none;
+
 }
 
 .title .react{
@@ -53,11 +55,14 @@ body {
   color: #b71b59;
 }
 
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
 .white {
   background-color: white;
-  margin: 5px;
-  height: 400px;
-  width: 100px;
+  --width: 60px;
   border-radius: 5px;
   border: 1px solid #333;
 }
@@ -72,16 +77,34 @@ div:nth-child(6), div:nth-child(13), div:nth-child(18), div:nth-child(25){
 
 .black {
   background-color: black;
-  margin: 5px;
-  height: 250px;
-  width: 50px;
+  --width: 36px;
   border-radius: 10px;
-  margin-left: -30px;
-  margin-right: -30px;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
   z-index: 2;
 }
 
 .isSounding {
   background-color: #999;
   transition: 0.5s;
+}
+
+@media (min-width: 1024px){
+  .container {
+    -webkit-transform: rotate(0deg);  /* to support Safari and Android browser */
+    -ms-transform: rotate(0deg);      /* to support IE 9 */
+    transform: rotate(0deg);
+    
+  }
+
+  .title {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+  }
 }

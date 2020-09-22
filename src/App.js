@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import adaLogo from "logo-fucsia-png";
+import reactLogo from "react-icon-png";
 import "./styles.css";
 
 export default function App() {
@@ -154,10 +156,8 @@ export default function App() {
 
   ];
 
-  const keys = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9", "o", "0", "p", "[", "=", "]", "a",
-  
-  "z", "s", "x", "c", "f", "v", "g", "b"]
-  // , "n", "j", "m", "k", ",", "l", ".", "/"];
+  const keys = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9", "o", "0", "p", "[", "=", "]", "a", "z", "s", "x", "c", "f", "v", "g", "b"];
+
 
   const play = (note) => {
     setIsSounding(note.name);
@@ -179,15 +179,15 @@ export default function App() {
     <div className="App">
 
       <div className="title">
-        <span>Piano con <a href="https://reactjs.org/" className="react">React</a>
-          <img src="react-icon.png" alt="React Logo" width="40px"></img>
-        </span>
+        <h3>Piano con <a href="https://reactjs.org/" className="react">React</a>
+          <img src={reactLogo} alt="React Logo" width="40px"></img>
+        </h3>
 
-        <span>Hecho por Ani con las chicas de 
-          <img src="logo-fucsia.png" alt="Ada Logo" height="35px"></img>
-        </span>
+        <h3>Hecho por Ani con las chicas de 
+          <img src={adaLogo} alt="Ada Logo" height="35px"></img>
+        </h3>
         {
-          isSounding && <span>Está sonando la nota { isSounding }</span>
+          isSounding && <h3>Está sonando la nota { isSounding }</h3>
         }        
       </div>
 
@@ -195,10 +195,10 @@ export default function App() {
 
         {notes.map((note, idx) => {
           return (
-            <div className={`${note.key === "white" ? "white" : "black"} 
+            <div className={`key ${note.key === "white" ? "white" : "black"} 
             ${isSounding === note.name ? "isSounding" : ""}`} 
             onClick={() => play(note)} key={idx}
-            onKeyPress={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
+            onKeyDown={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
 
             </div>
           );
