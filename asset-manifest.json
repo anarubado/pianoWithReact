@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/pianoWithReact/static/css/main.ae02e487.chunk.css",
-    "main.js": "/pianoWithReact/static/js/main.6a228177.chunk.js",
-    "main.js.map": "/pianoWithReact/static/js/main.6a228177.chunk.js.map",
+    "main.css": "/pianoWithReact/static/css/main.a8bbd858.chunk.css",
+    "main.js": "/pianoWithReact/static/js/main.48d0e86d.chunk.js",
+    "main.js.map": "/pianoWithReact/static/js/main.48d0e86d.chunk.js.map",
     "runtime-main.js": "/pianoWithReact/static/js/runtime-main.4b2f557a.js",
     "runtime-main.js.map": "/pianoWithReact/static/js/runtime-main.4b2f557a.js.map",
-    "static/js/2.f246b197.chunk.js": "/pianoWithReact/static/js/2.f246b197.chunk.js",
-    "static/js/2.f246b197.chunk.js.map": "/pianoWithReact/static/js/2.f246b197.chunk.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/pianoWithReact/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.809539dc.chunk.js": "/pianoWithReact/static/js/2.809539dc.chunk.js",
+    "static/js/2.809539dc.chunk.js.map": "/pianoWithReact/static/js/2.809539dc.chunk.js.map",
     "index.html": "/pianoWithReact/index.html",
-    "precache-manifest.27076ec36f70a466ed43cb9cce8fd01f.js": "/pianoWithReact/precache-manifest.27076ec36f70a466ed43cb9cce8fd01f.js",
+    "precache-manifest.95f005daac67c53a73fd606acfe9066d.js": "/pianoWithReact/precache-manifest.95f005daac67c53a73fd606acfe9066d.js",
     "service-worker.js": "/pianoWithReact/service-worker.js",
-    "static/css/main.ae02e487.chunk.css.map": "/pianoWithReact/static/css/main.ae02e487.chunk.css.map",
-    "static/js/2.f246b197.chunk.js.LICENSE.txt": "/pianoWithReact/static/js/2.f246b197.chunk.js.LICENSE.txt",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/pianoWithReact/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.a8bbd858.chunk.css.map": "/pianoWithReact/static/css/main.a8bbd858.chunk.css.map",
+    "static/js/2.809539dc.chunk.js.LICENSE.txt": "/pianoWithReact/static/js/2.809539dc.chunk.js.LICENSE.txt",
     "static/media/a-4.mp3": "/pianoWithReact/static/media/a-4.da1e3533.mp3",
     "static/media/a-5.mp3": "/pianoWithReact/static/media/a-5.0803afc4.mp3",
     "static/media/a4.mp3": "/pianoWithReact/static/media/a4.d4190dc7.mp3",
@@ -45,8 +47,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4b2f557a.js",
-    "static/js/2.f246b197.chunk.js",
-    "static/css/main.ae02e487.chunk.css",
-    "static/js/main.6a228177.chunk.js"
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.809539dc.chunk.js",
+    "static/css/main.a8bbd858.chunk.css",
+    "static/js/main.48d0e86d.chunk.js"
   ]
 }

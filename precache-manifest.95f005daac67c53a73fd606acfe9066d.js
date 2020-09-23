@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97e71054b48a93e43f8c390a1af30244",
+    "revision": "a6bbfe239aa27b93db41d467879d537d",
     "url": "/pianoWithReact/index.html"
   },
   {
-    "revision": "9cef3923385deef839b0",
-    "url": "/pianoWithReact/static/css/main.ae02e487.chunk.css"
+    "revision": "18e81f8560bc56f1f23f",
+    "url": "/pianoWithReact/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "7d53f459b258d626c651",
-    "url": "/pianoWithReact/static/js/2.f246b197.chunk.js"
+    "revision": "92fbbb5ae67ba7a803f7",
+    "url": "/pianoWithReact/static/css/main.a8bbd858.chunk.css"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/pianoWithReact/static/js/2.f246b197.chunk.js.LICENSE.txt"
+    "revision": "18e81f8560bc56f1f23f",
+    "url": "/pianoWithReact/static/js/2.809539dc.chunk.js"
   },
   {
-    "revision": "9cef3923385deef839b0",
-    "url": "/pianoWithReact/static/js/main.6a228177.chunk.js"
+    "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
+    "url": "/pianoWithReact/static/js/2.809539dc.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "92fbbb5ae67ba7a803f7",
+    "url": "/pianoWithReact/static/js/main.48d0e86d.chunk.js"
   },
   {
     "revision": "a197a6b9649c2f531a81",
