@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 *:focus {
@@ -29,6 +28,10 @@
 
 a {
   font-weight: bolder;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 h3 {
@@ -97,6 +100,18 @@ body {
     justify-content: flex-start;
     align-items: center;
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .dropdown {
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+
+  #dropdown-basic-button {
+    background-color: #b71b59;
+    border-color: #b71b59;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
   }
 }

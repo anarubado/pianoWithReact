@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 import "./styles.css";
 
 export default function App() {
@@ -173,8 +176,18 @@ export default function App() {
     }
   };
 
+  let items = [];
+
+  for (let i = 0; i < notes.length; i++) {
+    items = [...items, <Dropdown.Item key={i} disabled><strong>{notes[i].name}</strong> es representada por <strong>"{keys[i]}"</strong></Dropdown.Item>];
+  }
+
   return (
     <div className="App">
+
+      <DropdownButton id="dropdown-basic-button" title="Notas" className="dropdown">        
+          {items}  
+      </DropdownButton>)
 
       <div className="titles">
         <h3>Piano en <a href="https://reactjs.org/" className="react" target="_blank" rel="noopener noreferrer">React</a></h3>
