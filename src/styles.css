@@ -15,36 +15,8 @@
   height: 120vh;
 }
 
-a{
-  font-weight: bolder;
-}
-
-h3{
-  background-color: rgb(25, 19, 114);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 24px;
-  display: block;
-}
-
-body {
-  background-image: url("./bg.jpg");
-  height: 100vh;
-}
-
-.container {
-  display: flex;
-  margin: 30px;
-  justify-content: center;
-  -webkit-transform: rotate(90deg);  /* to support Safari and Android browser */
-  -ms-transform: rotate(90deg);      /* to support IE 9 */
-  transform: rotate(90deg);
-}
-
 .title{
   display: none;
-
 }
 
 .title .react{
@@ -53,6 +25,31 @@ body {
 
 .title .ada{
   color: #b71b59;
+}
+
+a {
+  font-weight: bolder;
+}
+
+h3 {
+  background-color: rgb(25, 19, 114);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 24px;
+}
+
+body {
+  background-image: url("./bg.jpg");
+}
+
+.container {
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .key {
@@ -67,17 +64,9 @@ body {
   border: 1px solid #333;
 }
 
-div:nth-child(5), div:nth-child(12), div:nth-child(17), div:nth-child(24){
-  margin-right: 0px;
-  border-right: none;
-}
-div:nth-child(6), div:nth-child(13), div:nth-child(18), div:nth-child(25){
-  margin-left: 0px;
-}
-
 .black {
   background-color: black;
-  --width: 36px;
+  --width: 37px;
   border-radius: 10px;
   margin-left: calc(var(--width) / -2);
   margin-right: calc(var(--width) / -2);
@@ -89,12 +78,16 @@ div:nth-child(6), div:nth-child(13), div:nth-child(18), div:nth-child(25){
   transition: 0.5s;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
+
+  .App {
+    height: 100vh;
+  }
+
   .container {
     -webkit-transform: rotate(0deg);  /* to support Safari and Android browser */
     -ms-transform: rotate(0deg);      /* to support IE 9 */
-    transform: rotate(0deg);
-    
+    transform: rotate(0deg);    
   }
 
   .title {
@@ -105,6 +98,5 @@ div:nth-child(6), div:nth-child(13), div:nth-child(18), div:nth-child(25){
     align-items: center;
     color: white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-
   }
 }

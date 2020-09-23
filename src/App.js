@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import adaLogo from "logo-fucsia-png";
-import reactLogo from "react-icon-png";
 import "./styles.css";
 
 export default function App() {
@@ -54,17 +52,17 @@ export default function App() {
       key: "black"
     },
     {
-      name: "La4",
+      name: "La3",
       link: require("./notes/a4.mp3"),
       key: "white"
     },
     {
-      name: "La#4 / Sib4",
+      name: "La#3 / Sib3",
       link: require("./notes/a-4.mp3"),
       key: "black"
     },
     {
-      name: "Si4",
+      name: "Si3",
       link: require("./notes/b4.mp3"),
       key: "white"
     },
@@ -114,17 +112,17 @@ export default function App() {
       key: "black"
     },
     {
-      name: "La5",
+      name: "La4",
       link: require("./notes/a5.mp3"),
       key: "white"
     },
     {
-      name: "La#5 / Sib5",
+      name: "La#4 / Sib4",
       link: require("./notes/a-5.mp3"),
       key: "black"
     },
     {
-      name: "Si5",
+      name: "Si4",
       link: require("./notes/b5.mp3"),
       key: "white"
     },
@@ -179,13 +177,9 @@ export default function App() {
     <div className="App">
 
       <div className="title">
-        <h3>Piano con <a href="https://reactjs.org/" className="react">React</a>
-          <img src={reactLogo} alt="React Logo" width="40px"></img>
-        </h3>
+        <h3>Piano en <a href="https://reactjs.org/" className="react">React</a></h3>
 
-        <h3>Hecho por Ani con las chicas de 
-          <img src={adaLogo} alt="Ada Logo" height="35px"></img>
-        </h3>
+        <h3>Hecho por Ani 🙋🏻 con las chicas de <a href="https://adaitw.org/" className="ada">Ada</a> 🥰</h3>
         {
           isSounding && <h3>Está sonando la nota { isSounding }</h3>
         }        
