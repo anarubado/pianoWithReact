@@ -15,15 +15,15 @@
   height: 120vh;
 }
 
-.title{
+.titles{
   display: none;
 }
 
-.title .react{
+.titles .react{
   color: #61dafb;
 }
 
-.title .ada{
+.titles .ada{
   color: #b71b59;
 }
 
@@ -43,7 +43,7 @@ body {
   background-image: url("./bg.jpg");
 }
 
-.container {
+.keyboard {
   display: flex;
   margin: 30px;
   justify-content: center;
@@ -84,13 +84,13 @@ body {
     height: 100vh;
   }
 
-  .container {
+  .keyboard {
     -webkit-transform: rotate(0deg);  /* to support Safari and Android browser */
     -ms-transform: rotate(0deg);      /* to support IE 9 */
     transform: rotate(0deg);    
   }
 
-  .title {
+  .titles {
     height: 200px;
     display: flex;
     flex-direction: column;

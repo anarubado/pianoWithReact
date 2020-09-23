@@ -176,24 +176,23 @@ export default function App() {
   return (
     <div className="App">
 
-      <div className="title">
-        <h3>Piano en <a href="https://reactjs.org/" className="react">React</a></h3>
+      <div className="titles">
+        <h3>Piano en <a href="https://reactjs.org/" className="react" target="_blank" rel="noopener noreferrer">React</a></h3>
 
-        <h3>Hecho por Ani 🙋🏻 con las chicas de <a href="https://adaitw.org/" className="ada">Ada</a> 🥰</h3>
+        <h3>Hecho por Ani <span role="img" aria-label="girl emoji">🙋🏻</span> con las chicas de <a href="https://adaitw.org/" className="ada" target="_blank" rel="noopener noreferrer">Ada</a> <span role="img" aria-label="love emoji">🥰</span></h3>
         {
           isSounding && <h3>Está sonando la nota { isSounding }</h3>
         }        
       </div>
 
-      <div className="container">
+      <div className="keyboard">
 
         {notes.map((note, idx) => {
           return (
             <div className={`key ${note.key === "white" ? "white" : "black"} 
-            ${isSounding === note.name ? "isSounding" : ""}`} 
-            onClick={() => play(note)} key={idx}
-            onKeyDown={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
-
+              ${isSounding === note.name ? "isSounding" : ""}`} 
+              onClick={() => play(note)} key={idx}
+              onKeyDown={(e) => handleKeyDown(e.key)} tabIndex="0">{/* e.key shows the exact letter of the key that was pressed. Use tabIndex attribute to be able to listen onKeyDown event on a div in React. */}
             </div>
           );
         })}
